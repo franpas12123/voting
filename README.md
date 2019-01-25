@@ -18,11 +18,11 @@ $ cd voting
 $ npm install
 ```
 
-## Step 3. Start Ganache
+## Step 3. Start Ganache and Add the MNEMONIC phrase
 Open the Ganache GUI client. This will start your local blockchain instance.
 Change the file name of "env" to ".env". Add your MNEMONIC phrase from Ganache to the MNEMONIC variable of ".env". Add your Infura API key to INFURA_API_Key variable. You have to register to Infura to get your Infura API key
 
-## Step 4. Compile & Deploy Smart Contract
+## Step 4. Compile & Deploy Smart Contract locally
 `$ truffle migrate --reset`
 You must migrate the smart contract each time your restart ganache.
 
@@ -33,3 +33,13 @@ You must migrate the smart contract each time your restart ganache.
 
 ## Step 6. Run the Front End Application
 `$ npm run dev`
+
+## Running on Kovan Test Network
+Register to https://gitter.im/kovan-testnet/faucet and paste the account that you want to use in testing to Kovan. Once Ether is transferred, change the network to Kovan Test Network.
+To deploy to Kovan Test Netwok,
+```
+$ truffle migrate --network kovan
+```
+
+## NOTE
+You should have enough ethers to deploy the smart contract or do a transaction
